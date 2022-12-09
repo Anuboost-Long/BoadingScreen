@@ -44,7 +44,13 @@ const data = [
 export default function PromotionScreen() {
   const renderHeader = () => {
     return (
-      <View style={{marginBottom: 10, padding: 20, backgroundColor: '#1683bf'}}>
+      <View
+        style={{
+          marginBottom: 10,
+          paddingHorizontal: 20,
+          paddingVertical: 10,
+          backgroundColor: '#1683bf',
+        }}>
         <View style={[styles.rowView, {width: width / 1.7}]}>
           <Text style={styles.icon}> {'<'} </Text>
           <Text style={styles.headerText}> Promotions </Text>
