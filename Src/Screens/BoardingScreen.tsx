@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React, {useRef, useState} from 'react';
-import {IMAGE_ASSETS} from './Assets/Images';
+import {IMAGE_ASSETS} from '../Assets/Images';
 
 const {height, width} = Dimensions.get('screen');
 const COLORS = {primary: '#282534', white: '#fff'};
