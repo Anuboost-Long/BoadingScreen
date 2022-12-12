@@ -23,5 +23,7 @@ const Color = {
   expired: '#EEEEEE',
   blurry: 'rgba(25, 27, 141, 0.2)',
   disabled: '#949494',
+  apollo: '#f7941d',
+  apolloBlue: '#1683bf',
 };
 export default Color;

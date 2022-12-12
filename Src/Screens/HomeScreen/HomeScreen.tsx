@@ -1,4 +1,4 @@
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import PromotionCarousel from '../../Components/PromotionCarousel';
 import {moderateScale} from 'react-native-size-matters';
@@ -7,6 +7,7 @@ import OptionHolder from '../../Components/OptionHolder';
 import {IMAGE_ASSETS} from '../../Assets/Images';
 import {DEVICE} from '../../Utils/DeviceCalibration';
 import GlobalHeader from '../../Components/GlobalHeader';
+import Color from '../../Constant/Color';
 
 export default function HomeScreen() {
   return (
@@ -15,6 +16,8 @@ export default function HomeScreen() {
       <SizedBox height={moderateScale(30)} />
       <PromotionCarousel />
       <SizedBox height={moderateScale(30)} />
+      <Text style={styles.titleText}> Services</Text>
+      <SizedBox height={moderateScale(10)} />
       <OptionHolder
         image={IMAGE_ASSETS.Express}
         height={DEVICE.SCREEN_WIDTH / 2}
@@ -49,5 +52,11 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
+  },
+  titleText: {
+    paddingHorizontal: moderateScale(10),
+    color: Color.commonText,
+    fontWeight: '700',
+    fontSize: moderateScale(16),
   },
 });
