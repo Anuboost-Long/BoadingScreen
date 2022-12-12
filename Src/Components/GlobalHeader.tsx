@@ -6,7 +6,6 @@ export default function GlobalHeader() {
   return (
     <View
       style={{
-        marginBottom: 10,
         paddingHorizontal: 20,
         paddingVertical: 10,
         backgroundColor: '#1683bf',
