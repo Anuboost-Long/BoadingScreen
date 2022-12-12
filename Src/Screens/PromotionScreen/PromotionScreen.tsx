@@ -3,43 +3,9 @@ import React from 'react';
 import {FlatList} from 'react-native';
 import {IMAGE_ASSETS} from '../../Assets/Images';
 import {TouchableOpacity} from 'react-native';
+import {PromotionData} from '../../Data/PromotionData';
 
 const {width} = Dimensions.get('screen');
-
-const data = [
-  {
-    name: 'Free On Deliver Number 2',
-    key: '1',
-    description:
-      'When you deliver once the second time is free with in the day',
-    limit: '31-dec',
-  },
-  {
-    name: '50% OFF',
-    key: '2',
-    description: 'Every Delivery price is 50% off Today',
-    limit: '31-dec',
-  },
-  {
-    name: 'Lottery Candidate',
-    key: '3',
-    description:
-      'For every delivery charge of 10$ you get a chance in the lottery',
-    limit: '31-dec',
-  },
-  {
-    name: 'Anything is 2.5$',
-    key: '4',
-    description: 'Charge 2.5$ on every delivery',
-    limit: '31-dec',
-  },
-  {
-    name: 'Free gifts',
-    key: '5',
-    description: 'Every 10 delivery get free mystery gift',
-    limit: '31-dec',
-  },
-];
 
 export default function PromotionScreen() {
   const renderHeader = () => {
@@ -82,7 +48,7 @@ export default function PromotionScreen() {
     <View style={styles.container}>
       <FlatList
         ListHeaderComponent={renderHeader}
-        data={data}
+        data={PromotionData}
         keyExtractor={item => item.key}
         renderItem={renderPromotions}
       />
@@ -122,7 +88,7 @@ const styles = StyleSheet.create({
   coverOpacity: {
     backgroundColor: 'black',
     position: 'absolute',
-    opacity: 0.3,
+    opacity: 0.5,
     borderRadius: 10,
   },
   cover: {
