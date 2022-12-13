@@ -9,6 +9,7 @@ interface OptionProps {
   title: string | undefined;
   height?: string | number | undefined;
   width?: string | number | undefined;
+  onPress?: any;
 }
 
 export default function OptionHolder({
@@ -16,9 +17,11 @@ export default function OptionHolder({
   title,
   width = DEVICE.SCREEN_WIDTH / 1,
   height = DEVICE.SCREEN_WIDTH / 2,
+  onPress,
 }: OptionProps) {
   return (
     <TouchableOpacity
+      onPress={onPress}
       activeOpacity={0.7}
       style={[
         styles.optionHolder,
@@ -66,6 +69,5 @@ const styles = StyleSheet.create({
   },
   optionHolder: {
     alignSelf: 'center',
-    paddingHorizontal: moderateScale(10),
   },
 });
